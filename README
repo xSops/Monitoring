@@ -1,4 +1,4 @@
-## Installation
+ Installation
 
 
 	sudo apt install mysql-server mysql-client
@@ -6,7 +6,7 @@
   git clone https://github.com/xSops/Monitoring
   
   	
-**Dépendances :**
+Dépendances :
 	
 	pip3 install mysql-connector
 	pip3 install flask
@@ -14,10 +14,10 @@
 	pip3 install apscheduler
 	pip3 install requests
   
-  ## login :
+   login :
 Admin :
-login : **root@root.com**
-  mdp : **password**
+login : root@root.com
+  mdp : password
 
 J'ai galérer pour ce projet, ce n'est pas quelque chose qui m'a motivé et je me suis surtout appuyer sur mes camarades. 
 Je compte passer en Commerce l'année prochaine car le dev n'est pas fait pour moi, je me perd rapidement.
