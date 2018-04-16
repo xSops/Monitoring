@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+	
+{% endblock %}
+
+{% block body %}
+	<form action="{{ url_for('login') }}" method="POST">
+		<div class="field">
+			<label for="email" class="label">Mail address</label>
+			<p class="control">
+				<input type="email" name="email">
+			</p>
+		</div>
+		<div class="field">
+			<label for="password" class="label">Password</label>
+			<p class="control">
+				<input type="password" name="password">
+			</p>
+		</div>
+		<div class="field">
+			<p class="control">
+				<button class="button is-large" type="submit">
+					Connexion
+				</button>
+			</p>
+			<span class="help">{{ message }}</span>
+		</div>
+	</form>
+{% endblock %}

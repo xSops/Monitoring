@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Add Website
+{% endblock %}
+
+{% block body %}
+
+ <section class="container-fluid body-container">
+
+    <div class="col-lg-4 offset-lg-4">
+        <div class="card rounded-0">
+            <div class="card-header">
+                <h3 class="mb-0">Ajouter un site web</h3>
+            </div>
+            <div class="card-body">
+                <form class="form" method="POST" action="#">
+
+                    <div class="form-group">
+                        <label for="link">URL</label>
+                        <input type="text" class="form-control form-control-lg rounded-0" name="link" id="link"
+                               required="required">
+                    </div>
+
+                    <button type="submit" class="btn btn-success btn-lg float-right" id="btn-login">Ajouter</button>
+                    <a href="{{ url_for('admin') }}" role="button" class="btn btn-primary btn-lg float-right">Annuler</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</section>
+{% endblock %}

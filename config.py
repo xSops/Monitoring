@@ -1,0 +1,6 @@
+SECRET_KEY='secret'
+
+DATABASE_HOST='localhost'
+DATABASE_USER='root'
+DATABASE_PASSWORD='root'
+DATABASE_NAME='monitoring'

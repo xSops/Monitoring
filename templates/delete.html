@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block titre %}
+    Administration
+{% endblock %}
+
+{% block body %}
+    </nav>
+    <h2 class="text">Supprimer le site : {{ sites[1] }}</h2>
+        <form action="" method="POST"  >
+            <a href="/admin/">
+                <input type="button" value="Annulez" class="btn btn-secondary btn-lg">
+                </input>
+            </a>
+            <input type="submit" value="Supprimer" class="btn btn-danger btn-lg"/>
+        </form>
+{% endblock %}

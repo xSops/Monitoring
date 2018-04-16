@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+
+{% block titre %}
+{{ super() }} - Accueil
+{% endblock %}
+
+{% block body %}
+<section class="container-fluid body-container">
+
+    <h1 class="text-center">Listes des sites</h1>
+    <div class="row websites-container text-center">
+
+        {% for site in sites %}
+            {% if site[2] == 200 %}
+                <div class="card  bg-success  text-white mb-3 website-card">
+                    <div class="card-header website-card-title"><h4><a href="{{ site[1] }}">{{ site[1] }}</a></h4></div>
+                    <div class="card-body">
+                        <div class="website-card-code">HTTP :  {{ site[2] }}</div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="{{ url_for('historic', id=site[0]) }}" class="btn btn-lg btn-white">Voir la fiche</a>
+                    </div>
+                </div>
+            {%  else : %}
+                <div class="card  bg-danger  text-white mb-3 website-card">
+                    <div class="card-header website-card-title"><h4><a href="{{ site[1] }}">{{ site[1] }}</a></h4></div>
+                    <div class="card-body">
+                        <div class="website-card-code">HTTP :  {{ site[2] }}</div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="{{ url_for('historic', id=site[0]) }}" class="btn btn-lg btn-white">Voir la fiche</a>
+                    </div>
+                </div>
+            {%  endif %}
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+	Admin section
+{% endblock %}
+
+{% block body %}
+
+<div class="collapse navbar-collapse" id="navbarColor03">
+        <ul class="navbar-nav mr-auto my-2 my-lg-0">
+        </ul>
+        <ul class="navbar-nav my-2 my-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" href="/admin/">Administration</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('logout') }}">Déconnexion <span class="sr-only">(current)</span></a>
+            </li>
+
+        </ul>
+</div>
+
+
+<section class="container-fluid body-container">
+
+    <div class="col-lg-4 offset-lg-4">
+            <div class="card rounded-0">
+                <div class="card-header">
+                    <h1>Administration</h1>
+                </div>
+                <div class="card-body">
+               
+                    {% for site in sites %}
+                        <p>
+                            {{ site[0] }} {{ site[1] }}
+                            <a href="{{ url_for('modif', id=site[0]) }}" role="button" class="btn btn-primary">Editer</a>>
+                                
+                            </a>
+                            <a href="{{ url_for('delete', id=site[0]) }}" role="button" class="btn btn-danger">Supprimer</a>>
+                                
+                            </a>
+                        </p><br>
+                    {% endfor %}
+                </div>
+                     <a href="{{ url_for('addwebsite') }}">
+                        <input type="button" value="Ajoutez un site" class="btn btn-lg">
+                        </input>
+                    </a>
+            </div>
+    </div>
+</section>
+    <div id="flash-messages-container"/>
+{% endblock %}
